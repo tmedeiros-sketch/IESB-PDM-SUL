@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Gerenciador de Despesas",
+    "slug": "gerenciador-despesas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#F4F7F5"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.praticas.gerenciadordespesas"
+    },
+    "android": {
+      "package": "br.com.praticas.gerenciadordespesas",
+      "softwareKeyboardLayoutMode": "resize"
+    }
+  }
+}
