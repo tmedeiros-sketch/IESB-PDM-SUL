@@ -1,0 +1,17 @@
+import { Pressable, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+export default function IconButton({ icon, size, color, onPress }) {
+  return (
+    <Pressable onPress={onPress} accessibilityRole="button"
+      accessibilityLabel="Adicionar despesa" hitSlop={8}
+      style={({ pressed }) => [styles.button, pressed && styles.pressed]}>
+      <Ionicons name={icon} size={size} color={color} />
+    </Pressable>
+  );
+}
+
+const styles = StyleSheet.create({
+  button: { padding: 8, marginRight: 8, borderRadius: 24 },
+  pressed: { opacity: 0.5 },
+});
