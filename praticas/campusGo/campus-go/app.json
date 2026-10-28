@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "CampusGo",
+    "slug": "campus-go",
+    "scheme": "campusgo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permitir acesso \u00e0s fotos para definir seu avatar.",
+          "cameraPermission": "Permitir acesso \u00e0 c\u00e2mera para tirar sua foto."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permitir acesso \u00e0 localiza\u00e7\u00e3o para registrar onde estudou."
+        }
+      ],
+      "expo-notifications"
+    ],
+    "android": {
+      "package": "com.campusgo.estudante",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

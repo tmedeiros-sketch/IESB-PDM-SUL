@@ -1,0 +1,3 @@
+import { Tabs } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
+export default function TabLayout() { const tabs = [{name:'index',title:'Início',icon:'home-outline'},{name:'tasks',title:'Tarefas',icon:'checkbox-outline'},{name:'wallet',title:'Bolso',icon:'wallet-outline'},{name:'profile',title:'Perfil',icon:'person-circle-outline'}]; return <Tabs screenOptions={{ tabBarActiveTintColor:'#2563eb',headerStyle:{backgroundColor:'#f8fafc'},tabBarStyle:{height:64,paddingBottom:8} }}>{tabs.map(t => <Tabs.Screen key={t.name} name={t.name} options={{title:t.title,tabBarIcon:({color,size})=><Ionicons name={t.icon} size={size} color={color}/>}} />)}</Tabs>; }

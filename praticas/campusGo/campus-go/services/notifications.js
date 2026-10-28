@@ -1,0 +1,4 @@
+import * as Notifications from 'expo-notifications';
+import { Platform } from 'react-native';
+Notifications.setNotificationHandler({handleNotification:async()=>({shouldShowBanner:true,shouldShowList:true,shouldPlaySound:true,shouldSetBadge:false})});
+export async function scheduleReminder(title,seconds=10){if(Platform.OS==='android'){await Notifications.setNotificationChannelAsync('lembretes',{name:'Lembretes',importance:Notifications.AndroidImportance.HIGH});}const p=await Notifications.requestPermissionsAsync();if(!p.granted)throw new Error('Permissão de notificações negada');return Notifications.scheduleNotificationAsync({content:{title:'CampusGo • Lembrete',body:title,sound:true},trigger:{type:Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,seconds,channelId:Platform.OS==='android'?'lembretes':undefined}});}
